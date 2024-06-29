@@ -24,7 +24,7 @@ const Profile = () => {
         const rating = ratingRef.current.value;
         const comment = commentRef.current.value;
         const id = plane.current.value;
-        const res = await axios.post(`http://localhost:8000/${id}/reviews`, { rating, comment });
+        const res = await axios.post(`https://air-ease-tw4v.vercel.app/${id}/reviews`, { rating, comment });
         console.log(res.data);
     };
     console.log(phone);

@@ -22,7 +22,7 @@ export default function Search() {
         const postData = { from, to };
 
       
-        const response =await axios.post('http://localhost:8000/find', {from, to} )
+        const response =await axios.post('https://air-ease-tw4v.vercel.app/find', {from, to} )
         setload(false);
         console.log(response.data);
         if( response.data == "ERROR"){

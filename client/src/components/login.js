@@ -86,7 +86,7 @@ export default function Login({ show, onClose }) {
       return;
 
     }
-    const res = await axios.post("http://localhost:8000/login", { email, password });
+    const res = await axios.post("https://air-ease-tw4v.vercel.app/login", { email, password });
     console.log(res.data);
 
     console.log(res.data);
@@ -143,7 +143,7 @@ export default function Login({ show, onClose }) {
 
 
 
-    const res = await axios.post("http://localhost:8000/register", { name, email, password, phoneNumber });
+    const res = await axios.post("https://air-ease-tw4v.vercel.app/register", { name, email, password, phoneNumber });
 
     console.log(res.data);
 

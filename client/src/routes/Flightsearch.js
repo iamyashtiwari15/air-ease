@@ -21,7 +21,7 @@ const Flightsearch = () => {
         try {
             setModalMessage("Flight booked successfully!");
             setShowModal(true);
-            const res = await axios.post("http://localhost:8000/booking", { email, airLine, date });
+            const res = await axios.post("https://air-ease-tw4v.vercel.app/booking", { email, airLine, date });
 
         } catch (error) {
             console.error("Booking error:", error);

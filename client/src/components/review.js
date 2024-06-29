@@ -13,7 +13,7 @@ const Review = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await axios.post(`http://localhost:8000/getReviews`, { airline });
+        const response = await axios.post(`https://air-ease-tw4v.vercel.app/getReviews`, { airline });
         setSelectedAirlineReviews(response.data);
       } catch (error) {
         console.error('Error fetching reviews:', error);
