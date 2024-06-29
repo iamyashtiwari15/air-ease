@@ -1,0 +1,177 @@
+/* General styles for the page */
+.flight {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.txt {
+    margin: 20px 0;
+}
+
+/* Container for all flight cards */
+.img {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Individual flight card */
+.img .card1 {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin: 10px;
+    width: calc(33% - 20px);
+    max-width: calc(33% - 20px);
+    min-width: 150px;
+    height: 120px;
+    text-align: left;
+}
+
+/* Image content inside card */
+.img .card1 .img-content {
+    flex: 0 0 auto;
+    width: auto;
+    height: 100%;
+    margin-right: 10px;
+}
+
+/* Image within image content */
+.img .card1 .img-content img {
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+/* Text content inside card */
+.img .card1 .txt {
+    flex: 1;
+}
+
+/* Anchor tags within text */
+.img .card1 .txt a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* First paragraph within anchor tags */
+.img .card1 .txt a p:first-child {
+    font-size: 16px;
+}
+
+/* Next paragraphs within anchor tags */
+.img .card1 .txt a p:not(:first-child) {
+    font-size: 12px;
+    display: inline;
+    margin: 0 5px;
+}
+
+/* Container for domestic airlines */
+.domesticAirlines {
+    border: 0.2px solid rgb(59, 59, 59);
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Individual airline card */
+.cp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+/* Airline logo */
+.cp img {
+    width: 64px;
+    height: 64px;
+}
+
+/* Airline name */
+.cp p {
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .img .card1 {
+        width: calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .img .card1 {
+        width: calc(100% - 20px);
+        max-width: calc(100% - 20px);
+    }
+    .domesticAirlines {
+        padding: 10px;
+    }
+    .cp {
+        margin: 10px 2px;
+    }
+    .cp img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Review Section Styles */
+.review-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-section h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.review-section .form-group {
+    margin-bottom: 15px;
+}
+
+.review-section .rate {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.review-section .rate input {
+    display: none;
+}
+
+.review-section .rate label {
+    cursor: pointer;
+    font-size: 20px;
+    color: #ccc;
+}
+
+.review-section .rate input:checked ~ label,
+.review-section .rate label:hover,
+.review-section .rate label:hover ~ label {
+    color: #ffdd00;
+}
